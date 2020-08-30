@@ -1,0 +1,2 @@
+# serializers imports
+from web.api.serializers.uploadMoviesSerializer import UploadMoviesSerializer

@@ -3,6 +3,8 @@ from django.db import models
 
 
 class RatingMovie(models.Model):
+    """ model for the rating object
+    """
     ratings = JSONField(verbose_name="Ratings")
 
     def __str__(self):

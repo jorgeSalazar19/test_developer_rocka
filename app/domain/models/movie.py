@@ -9,6 +9,9 @@ from domain.models import RatingMovie
 
 
 class Movie(models.Model):
+    """ model for the movie object
+    """
+
     title = models.CharField(verbose_name="Title", max_length=50)
     year = models.CharField(verbose_name="Year", max_length=4)
     genres = models.ManyToManyField(Genre)

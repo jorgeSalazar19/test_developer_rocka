@@ -11,7 +11,7 @@ class MoviesListView(ListAPIView):
 
     def get_queryset(self):
         """
-        retorn lisst of movies order
+        return list of movies order
         """
         ordering_method = self.request.GET.get('ordering_method')
         if ordering_method == "average":

@@ -14,7 +14,8 @@ from domain.models import RatingMovie
 from domain.models import Movie
 
 class UploadMoviesService(object):
-
+    """ service for upload data to databases
+    """
     
     def __init__(self, *args, **kwargs):
         self.redis_client = redis.StrictRedis(host=os.environ['REDIS_SERVER'], port=os.environ['REDIS_PORT'], db=0)

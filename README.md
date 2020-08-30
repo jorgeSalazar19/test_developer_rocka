@@ -8,17 +8,31 @@ The project contain one file of docker-compose, this file can use to run project
 - add one file named .env with the following variables:
     DJANGO_SETTINGS_MODULE=config.settings.dev
 
-    POSTGRES_DB=postgres
-    POSTGRES_USER=postgres
-    POSTGRES_PASSWORD=postgres
-    POSTGRES_PORT=5432
-    POSTGRES_HOST=db
-    PGDATA=/var/lib/postgresql/data/pgdata
+    - POSTGRES_DB=postgres
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - POSTGRES_PORT=5432
+    - POSTGRES_HOST=db
+    - PGDATA=/var/lib/postgresql/data/pgdata
 
-    REDIS_SERVER=redis
-    REDIS_PORT=6379
+    - REDIS_SERVER=redis
+    - REDIS_PORT=6379
 
 - run the following command - docker-compose up --build
+
+
+## Endpoint to execute logic
+
+- url_project/api/order/movies/
+
+    - Method GET
+    - parameter: ordering_method, this parameter has 3 different values (average, same_movie, actors), each para is used for different sort
+
+- url_project/api/upload/movies/
+
+    - Method POST
+    - Parameter : movies (list of json objects)
+    - This endpoint upload the data of movies in the models project, before thi action you can execute the endpoint order for show data sort
 
 
 

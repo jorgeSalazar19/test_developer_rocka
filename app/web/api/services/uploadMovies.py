@@ -37,8 +37,6 @@ class UploadMoviesService(object):
         return actor_ids
 
 
-
-
     def _upload_genres(self, movie):
         genres_ids = []
         for genre in movie['genres']:
@@ -65,12 +63,12 @@ class UploadMoviesService(object):
         return rating
     
 
-    def _exis_movie(self, movie_title):
+    def _exist_movie(self, movie_title):
         return True if Movie.objects.filter(title=movie_title) else False
 
 
     def _upload_movie(self, movie, rating_id, genres_ids, actor_ids):
-        if not self._exis_movie(movie['title']):
+        if not self._exist_movie(movie['title']):
             movie = Movie(**movie)
             movie.ratings = rating_id
             movie.save()

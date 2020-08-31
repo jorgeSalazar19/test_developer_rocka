@@ -35,4 +35,9 @@ The project contain one file of docker-compose, this file can use to run project
     - This endpoint upload the data of movies in the models project, before thi action you can execute the endpoint order for show data sort
 
 
+## Execute Tests
+
+- run the following command: docker-compose run --rm web  python manage.py test web --settings=config.settings.dev
+
+- the test folder is into path (web/api/tests)
 

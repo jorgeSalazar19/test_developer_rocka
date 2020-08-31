@@ -3,7 +3,6 @@ from rest_framework.generics import ListAPIView
 
 from domain.models import Movie
 from web.api.serializers import MovieSerializer
-from web.api.mixins import MovieMixin
 
 
 class MoviesListView(ListAPIView):

@@ -17,7 +17,6 @@ class UploadMovies(views.APIView):
 
     def __init__(self, *args, **kwargs):
         self.serializer_class = UploadMoviesSerializer
-        self._upload_data_service = UploadMoviesService
         
 
     def post(self, request):

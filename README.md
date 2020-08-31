@@ -34,6 +34,14 @@ The project contain one file of docker-compose, this file can use to run project
     - Parameter : movies (list of json objects)
     - This endpoint upload the data of movies in the models project, before thi action you can execute the endpoint order for show data sort
 
+## Execute Migrations
+
+- run the following command: docker-compose run --rm web  python manage.py migrate --settings=config.settings.dev
+
+- run the following command: docker-compose run --rm web  python manage.py makemigrations domain --settings=config.settings.dev
+
+- run the following command: docker-compose run --rm web  python manage.py migrate domain --settings=config.settings.dev
+
 
 ## Execute Tests
 
